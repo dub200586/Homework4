@@ -11,10 +11,17 @@ public class Task2 {
 
         int[] newArray = new int[newArrayLenth];
 
-        for (int j : array) {
-            if (j != 0) {
-                newArray[newArrayLenth - 1] = j;
-                System.out.println(newArray[newArrayLenth - 1]);
+        if (newArrayLenth != 0 && newArrayLenth != array.length) {
+            for (int j : array) {
+                if (j != 0) {
+                    newArray[newArrayLenth - 1] = j;
+                    System.out.println(newArray[newArrayLenth - 1]);
+                }
+            }
+        }else {
+            for (int i : array) {
+                newArray = array.clone();
+                System.out.println(i);
             }
         }
     }
